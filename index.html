@@ -26,7 +26,7 @@
       }
 
       var SuperUserAccount = "";
-      SuperUserAccount = getSuperUser();
+      SuperUserAccount = Promise.resolve(getSuperUser());
       console.log(SuperUserAccount);
       var h = SuperUserAccount.split("/n");
 
