@@ -17,14 +17,14 @@
 
     <script>
 
-      var obja
+      var obja = "";
 
       fetch('SuperUser.txt')
         .then(response => response.text())
         .then(data => obja = data) 
-      console.log(obja)
+      console.log(obja);
       let SuperUserAccount = obja.split("\n");
-      console.log(obja)
+      console.log(obja);
   // outputs the content of the text file
      
      </script> 
