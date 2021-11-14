@@ -21,11 +21,12 @@
         return fetch('SuperUser.txt')
         .then(response => response.text())
         .then((responseData) => {
-          return responseData
+          return responseData;
         }) 
       }
 
-      console.log(getSuperUser())
+      varSuperUserAccount = "";
+      SuperUserAccount = getSuperUser();
 
       
   // outputs the content of the text file
