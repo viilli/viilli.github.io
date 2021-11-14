@@ -16,27 +16,8 @@
     <input type="text" value="salasana">
 
     <var>SuperUser</var>
-    SuperUser = <?php include('myFile.txt'); ?>
-
-    <script>
-      
-      function getSuperUser(){
-        return fetch('SuperUser.txt')
-        .then(response => response.text())
-        .then((responseData) => {
-          return responseData;
-        }) 
-      }
-
-      var SuperUserAccount = "";
-      SuperUserAccount = Promise.resolve(getSuperUser());
-      console.log(SuperUserAccount);
-      var h = SuperUserAccount.split("/n");
-
-      
-  // outputs the content of the text file
-     
-     </script> 
+    <p><?php include('myFile.txt'); ?> </p>
+    
   </div>
   </body>
 </html>
