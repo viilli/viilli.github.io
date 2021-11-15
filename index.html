@@ -10,12 +10,23 @@
   </head>
   <body>
     <h1>Vili.photography</h1>
-    <embed src="SuperUser.txt">
-      <div class="login">
-    <input type="text" value="käyttäjä nimi">
-    <input type="text" value="salasana">
     
-    <p><?php include('myFile.txt'); ?> </p>
+    <script>
+
+      var folder = "images/";
+
+      $.ajax({
+          url : folder,
+          success: function (data) {
+              $(data).find("a").attr("href", function (i, val) {
+                  if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                      $("body").append( "<img src='"+ folder + val +"'>" );
+                  } 
+              });
+          }
+      });
+
+    </script>
     
   </div>
   </body>
